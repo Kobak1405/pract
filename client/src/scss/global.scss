@@ -1,0 +1,37 @@
+// Import the setup styles
+@import "setup/normalize.scss";
+@import "setup/variables.scss";
+@import "setup/mixins.scss";
+@import "setup/breakpoint.scss";
+@import "setup/typography.scss";
+@import "setup/visibility.scss";
+@import "setup/grid.scss";
+@import "setup/slick.scss";
+
+// Import the basics styles
+@import "basics/svg.scss";
+@import "basics/base.scss";
+@import "basics/links.scss";
+@import "basics/buttons.scss";
+@import "basics/forms.scss";
+@import "basics/checkbox.scss";
+@import "basics/radiobutton.scss";
+
+// Import the components styles
+@import "components/shared/header.scss";
+@import "components/shared/footer.scss";
+@import "components/shared/breadcrumbs.scss";
+
+@import "components/homepage/selects/calender.scss";
+@import "components/homepage/selects/topcountries.scss";
+@import "components/homepage/filters.scss";
+@import "components/homepage/slider.scss";
+@import "components/homepage/homepage.scss";
+
+@import "components/tours/tours.scss";
+@import "components/tours/tourslist.scss";
+@import "components/tours/filters/filtersAll.scss";
+@import "components/tours/filters/accordion.scss";
+
+// Includes
+@include foundation-visibility-classes;

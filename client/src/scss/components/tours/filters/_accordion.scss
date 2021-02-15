@@ -1,0 +1,41 @@
+.accordion {
+    font-family: Lato;
+    border-bottom: 1px solid $light-gray-5;
+
+    &__header {
+        padding: 15px 40px 15px 30px;
+        position: relative;
+        color: $main-dark;
+        cursor: pointer;
+        background-color: $white;
+        z-index: 6;
+    }
+
+    &__header-icon {
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        transform: translateY(-50%) rotate(-90deg);
+        transition-duration: 0.3s;
+
+        &.rotate {
+            transform: translateY(-50%) rotate(90deg);
+            transition-duration: 0.3s;
+        }
+    }
+
+    &__body {
+        /*display: none; */
+        overflow: hidden;
+        background-color: #fff;
+        border-top: 0;
+        transition: .3s ease-out;
+        margin-bottom: 10px;
+
+        &-inner {
+            padding: 8px 30px;
+            overflow-wrap: break-word;
+            /*white-space: pre-wrap; */
+        }
+    }
+}

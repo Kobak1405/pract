@@ -1,0 +1,25 @@
+.space-container {
+    margin: 0 15px;
+
+    @include breakpoint(medium up) {
+        margin: 0 30px;
+    }
+
+    @include breakpoint(large up) {
+        margin: 0 60px;
+    }
+}
+
+.overflow-visible {
+    overflow: visible !important;
+}
+
+.divider-circle {
+    color: $light-gray;
+    font-size: 14px;
+    margin: 0 3px;
+
+    @include breakpoint(large up) {
+        margin: 0 10px;
+    }
+}

@@ -1,0 +1,55 @@
+.top-places {
+    margin-top: 10px;
+
+    &__title {
+        font-size: 12px;
+        margin-bottom: 5px;
+        color: $light-gray-2;
+    }
+
+    &__tours {
+        margin: 15px 0 20px;
+    }
+
+    .tours-number {
+        font-size: 14px;
+        color: $main-gray;
+    }
+
+    .countries {
+        &__list {
+            margin-left: 22px;
+            margin-bottom: 15px;
+            margin-right: 30px;
+            font-size: 14px;
+            color: $main-dark;
+        }
+
+        &__list-item {
+            position: relative;
+            margin-top: 12px;
+
+            &-link {
+                font-size: 14px;
+                color: $main-dark;
+            }
+        }
+
+        &__flag {
+            left: -22px;
+        }
+    }
+
+    .cities {
+        &__list-item {
+            position: relative;
+            margin-top: 12px;
+            line-height: 19px;
+
+            &-link {
+                font-size: 14px;
+                color: $main-dark;
+            }
+        }
+    }
+}

@@ -1,0 +1,154 @@
+.tours-list {
+    @include breakpoint(large up) {
+        margin-left: 32px;
+    }
+
+    &__item {
+        margin-bottom: 20px;
+        box-shadow: 2px 1px 30px -11px $dark-gray;
+
+        &-image {
+            background-color: $dark-gray-2; // HAS TO BE REMOVED
+            height: 200px;
+
+            @include breakpoint(medium up) {
+                height: auto;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-buttons {
+            display: flex;
+            padding: 16px;
+            border-top: 1px solid $light-gray-5;
+
+            @include breakpoint(medium up) {
+                border-top: none;
+                border-left: 1px solid $light-gray-5;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            @include breakpoint(medium up) {
+                padding: 24px;
+            }
+
+            .buttons {
+                &__price {
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: $main-blue;
+                    width: 50%;
+
+                    @include breakpoint(medium up) {
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+
+            .button__main {
+                padding: 10px 15px;
+                text-align: center;
+                width: 50%;
+                font-size: 10px;
+
+                @include breakpoint(medium up) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__item-content {
+        padding: 16px;
+
+        @include breakpoint(large up) {
+            padding: 24px 0 24px 24px;
+        }
+
+        .content {
+            &__title {
+                font-size: 16px;
+                margin-top: 0;
+                margin-bottom: 10px;
+                font-weight: bold;
+                color: $main-dark;
+
+                @include breakpoint(large up) {
+                    font-size: 20px;
+                }
+            }
+
+            &__period {
+                display: flex;
+                justify-content: flex-start;
+                margin-bottom: 10px;
+
+                &-days {
+                    color: $black;
+                    font-size: 14px;
+                }
+
+                &-details {
+                    color: $main-gray;
+                    font-size: 14px;
+                }
+            }
+
+            &__country-wrapper {
+                display: flex;
+                margin-bottom: 24px;
+            }
+
+            &__country-item {
+                position: relative;
+                font-size: 14px;
+                margin-right: 10px;
+                color: $main-gray;
+
+                &:first-child {
+                    color: $main-dark;
+                }
+            }
+
+            &__details {
+                display: flex;
+
+                &-element {
+                    position: relative;
+                    padding-left: 36px;
+                    margin-right: 20px;
+                    white-space: nowrap;
+                    font-size: 12px;
+                    line-height: 25px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    @include breakpoint(large up) {
+                        margin-right: 32px;
+                    }
+                }
+
+                &-circle {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    background-color: $dark-gray-2;
+                }
+            }
+        }
+    }
+}

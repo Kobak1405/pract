@@ -1,0 +1,17 @@
+.button {
+    &__main {
+        width: 100%;
+        padding: 30px 0;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 0;
+        white-space: nowrap;
+        background-color: $main-blue;
+        color: $white;
+        cursor: pointer;
+
+        @include breakpoint(medium only) {
+            font-size: 12px;
+        }
+    }
+}

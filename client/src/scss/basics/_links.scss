@@ -1,0 +1,19 @@
+.link {
+    &__blue {
+        display: block;
+        font-size: 14px;
+        color: $main-blue;
+    }
+
+    &__black {
+        display: block;
+        font-size: 14px;
+        color: $black;
+    }
+
+    &__gray {
+        display: block;
+        font-size: 14px;
+        color: $main-gray;
+    }
+}

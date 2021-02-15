@@ -1,0 +1,137 @@
+.header {
+    background-color: $white;
+
+    @include breakpoint(large up) {
+        display: flex;
+    }
+
+    .header_logo {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .mobile-menu {
+        margin-top: -64px;
+
+        .navbar-burger {
+            height: 64px;
+
+            &:hover {
+                background-color: transparent;
+            }
+        }
+
+        .navbar-menu {
+            overflow: hidden;
+            display: block;
+            height: 0;
+            padding: 0;
+            width: 100vw;
+            transition: height .5s ease-in;
+
+            &.is-active {
+                height: 100vh;
+            }
+        }
+
+        .menu-item {
+            &__wrapper {
+                margin-left: 64px;
+            }
+
+            &__item {
+                font-size: 14px;
+                color: $main-dark;
+
+                & + .menu-item__item {
+                    @include breakpoint(medium down) {
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    .header-menu {
+        @include breakpoint(large up) {
+            width: 100%;
+        }
+    }
+
+    .desktop-menu {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100%;
+
+        @include breakpoint(large up) {
+            padding-right: 60px;
+        }
+
+        .menu-item {
+            &__wrapper {
+                display: flex;
+            }
+
+            &__item {
+                margin-right: 50px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            &__item-arrow {
+                margin-left: 8px;
+
+                img{
+                    transform: rotate(-90deg);
+                }
+            }
+
+            &__item-link {
+                font-size: 14px;
+                color: $main-dark;
+                padding: 15px 0;
+            }
+        }
+    }
+
+    .top-countries-large {
+        display: block;
+        transition: opacity 2s ease;
+        position: absolute;
+        z-index: 10;
+        padding: 25px;
+        background-color: $white;
+        box-shadow: 2px 7px 31px -10px $dark-gray;
+        -webkit-animation: slide-down .3s ease-out;
+        -moz-animation: slide-down .3s ease-out;
+
+        @include breakpoint(large up) {
+            top: 55px;
+            padding: 20px 20px 10px;
+        }
+
+        &.hide {
+            transition: opacity 2s ease;
+            -webkit-animation: slide-down .3s ease-out;
+            -moz-animation: slide-down .3s ease-out;
+        }
+
+        .top-places {
+            display: flex;
+            margin: 0;
+        }
+    }
+}
+
+@-webkit-keyframes slide-down {
+    0% { opacity: 0; -webkit-transform: translateY(15%); }
+  100% { opacity: 1; -webkit-transform: translateY(0); }
+}
+
+@-moz-keyframes slide-down {
+    0% { opacity: 0; -moz-transform: translateY(15%); }
+  100% { opacity: 1; -moz-transform: translateY(0); }
+}

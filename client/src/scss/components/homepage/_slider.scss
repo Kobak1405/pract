@@ -1,0 +1,96 @@
+.hp-slider {
+    &_gradient {
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        bottom: 0;
+        background-image: linear-gradient(to bottom, rgba(47, 63, 82, 0) , rgba(47, 63, 82, .9));
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        height: 100vh;
+    }
+
+    .progressBar {
+        width: 100%;
+        height: 5px;
+        background-color: rgba($white, .5);
+        display: block;
+
+        .inProgress {
+            background-color: rgba($white, 1);
+            width: 0%;
+            height: 5px;
+        }
+    }
+
+    .slick-dots {
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+        margin-bottom: 0;
+        list-style: none;
+        font-size: rem-calc(20);
+
+        @include breakpoint(medium up) {
+            font-size: rem-calc(18);
+        }
+
+        li {
+            flex-grow: 1;
+            text-align: center;
+            margin: 0 10px;
+            color: default-black;
+            line-height: rem-calc(10);
+
+            @include breakpoint(medium up) {
+                line-height: inherit;
+                margin: 0 5px;
+                font-size: rem-calc(18);
+            }
+
+            a,
+            .progressbar__title {
+                color: $white;
+                font-size: rem-calc(12);
+
+                @include breakpoint(medium up) {
+                    font-size: rem-calc(18);
+                }
+            }
+
+            .progressbar__title {
+                display: none;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 20px;
+                font-size: 12px;
+                white-space: nowrap;
+            }
+
+            &.slick-active {
+                .progressbar__title {
+                    display: block;
+                }
+
+                a,
+                .progressbar__title {
+                    color: $white;
+                }
+            }
+        }
+
+        .pager__item {
+            padding: 10px 0;
+            display: block;
+        }
+    }
+}

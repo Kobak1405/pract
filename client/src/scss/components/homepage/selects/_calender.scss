@@ -1,0 +1,154 @@
+/*
+    !important are used to overwrite
+    default library styles
+*/
+
+.datepicker-trigger {
+    .input-wrapper {
+        margin: 0;
+    }
+
+    .asd__wrapper--full-screen {
+        z-index: 7;
+    }
+
+    .asd__wrapper {
+        top: auto;
+        border-top: 1px solid $light-gray;
+
+        .asd__inner-wrapper {
+            height: 290px;
+        }
+
+        .asd__mobile-header {
+            display: none;
+        }
+
+        .asd__month {
+            padding: 22px 15px;
+
+            .asd__month-name {
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 400;
+                margin-bottom: 50px;
+                color: $black;
+            }
+        }
+
+        .asd__datepicker-header {
+            .asd__change-month-button--next button,
+            .asd__change-month-button--previous button {
+                background-image: url('~@/assets/img/arrows/arrow-left.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 16px;
+                padding: 0;
+                width: 10px;
+                border: none;
+
+                svg {
+                    display: none;
+                }
+            }
+
+            .asd__change-month-button--next button {
+                transform: rotate(180deg);
+            }
+
+            .asd__change-month-button--previous {
+                top: 22px;
+                padding-left: 30px;
+            }
+
+            .asd__change-month-button--next {
+                top: 22px;
+                padding-right: 30px;
+            }
+        }
+
+        .asd__days-legend {
+            display: flex;
+            justify-content: space-between;
+            top: 55px;
+            padding: 0 30px 5px;
+            border-bottom: 1px solid $light-gray;
+
+            .asd__day-title {
+                width: auto;
+                color: $dark-gray;
+            }
+        }
+
+        .asd__month-table {
+            .asd__day {
+                border: none !important;
+            }
+
+            .asd__day-button {
+                font-size: 14px;
+            }
+
+            .asd__day--enabled {
+                &:hover {
+                    background-color: $light-blue !important;
+                }
+
+                &:focus {
+                    background-color: $main-blue;
+                    outline: none; // has to be replaced with global styles
+                }
+            }
+
+            .asd__day--selected {
+                color: $white !important;
+
+                &:hover {
+                    background-color: $main-blue !important;
+                }
+            }
+
+            .asd__day--in-range {
+                color: $white !important;
+            }
+        }
+
+        .asd__action-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+
+            @include breakpoint(large up) {
+                display: none;
+            }
+
+            button {
+                width: 100%;
+                padding: 15px 0;
+                float: none;
+                left: 0;
+                right: 0;
+                text-transform: uppercase;
+                font-weight: 500;
+                border-radius: 0;
+
+                &:first-of-type {
+                    font-size: 14px;
+                    background-color: $white;
+                    color: $main-blue;
+                    border: 1px solid $main-blue;
+                }
+
+                &:last-of-type {
+                    font-size: 14px;
+                    background-color: $main-blue;
+                    color: $white !important;
+                }
+            }
+        }
+
+        .asd__keyboard-shortcuts-trigger-wrapper {
+            display: none;
+        }
+    }
+}

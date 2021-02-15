@@ -1,0 +1,73 @@
+.homepage {
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+
+    &__wrapper {
+        height: 100%;
+        z-index: 10;
+
+        @include breakpoint(large up) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    &__slider-wrapper {
+        position: absolute;
+        bottom: 0;
+
+        @include breakpoint(large up) {
+            position: relative;
+        }
+    }
+
+    .main-descr {
+        margin-top: 20px;
+    }
+
+    &__filters {
+        margin-top: 30px;
+
+        @include breakpoint(large up) {
+            margin-top: 50px;
+        }
+    }
+
+    &__info {
+        z-index: -1;
+
+        @include breakpoint(medium down) {
+            position: absolute;
+            top: 25%;
+        }
+
+        @include breakpoint(large up) {
+            margin-bottom: 200px;
+        }
+    }
+
+    .hp-slider {
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: rgba(0, 0, 0, .6);
+            z-index: 1;
+
+            @include breakpoint(large up) {
+                display: none;
+            }
+        }
+
+        .slick-dots {
+            @include breakpoint(medium down) {
+                display: none;
+            }
+        }
+    }
+}

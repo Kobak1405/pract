@@ -1,0 +1,15 @@
+.breadcrumbs {
+    &__wrapper {
+        display: flex;
+        color: $main-gray;
+        padding: 30px 0 10px;
+    }
+
+    &__item {
+        padding-right: 10px;
+
+        &:not(:first-of-type) {
+            padding-left: 10px;
+        }
+    }
+}

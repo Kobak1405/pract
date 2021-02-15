@@ -1,0 +1,32 @@
+.footer {
+    padding: 20px 0;
+    border-top: 1px solid $light-gray-4;
+    background-color: $white;
+
+    @include breakpoint(large up) {
+        padding: 15px 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoint(medium down) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &-inner {
+            display: flex;
+            justify-content: space-between;
+
+            @include breakpoint(medium down) {
+                padding: 12px 0;
+            }
+
+            &-item {
+                margin-right: 10px;
+            }
+        }
+    }
+}

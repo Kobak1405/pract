@@ -1,0 +1,9 @@
+.homepage__filters {
+    .input-wrapper{
+        #datepicker-trigger{
+            @include breakpoint(medium down) {
+                border-top: 0;
+            }
+        }
+    }
+}

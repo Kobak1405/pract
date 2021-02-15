@@ -1,0 +1,40 @@
+// =================================
+//    Breakpoints
+// =================================
+$phone: 320px;
+$phoneLandscape: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+$desktopMedium: 1200px;
+$desktopLarge: 1600px;
+$desktopLargeX2: 3200px;
+
+
+$breakpoints: (
+  small: 0,
+  medium: 768px,
+  large: 1024px,
+  xlarge: 1280px,
+  xxlarge: 1920px,
+);
+$print-breakpoint: large;
+$breakpoint-classes: (small medium large xlarge xxlarge);
+
+// =================================
+//    Colors
+// =================================
+$white: #fff;
+$black: #000;
+
+$main-blue: #0062D6;
+$main-gray: #A0AFC2;
+$main-dark: #171F29;
+
+$light-blue: #BBDAFF;
+$light-gray: #D0D7DF;
+$light-gray-2: #8999AE;
+$light-gray-3: #718299;
+$light-gray-4: #EAEFF4;
+$light-gray-5: #F0F3F7;
+$dark-gray: #656B74;
+$dark-gray-2: #C4C4C4;
